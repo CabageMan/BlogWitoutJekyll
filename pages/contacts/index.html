@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact us</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation-bar">
+            <a href="/" class="left current">HOME</a>
+            <a href="/pages/categories/" class="right usual">CATEGORIES</a>
+            <a href="/pages/blog/" class="right usual">BLOG</a>
+            <a href="/pages/staff/" class="right usual">STAFF</a>
+            <a href="/pages/about/" class="right usual">ABOUT</a>
+            <a href="/pages/contacts/" class="right usual">CONTACT</a>
+        </div>
+        <div class="page-container">
+            <h3 class="text-center large-title">Contact page</h3>
+            <p class="text-center middle-title">This page tells how can you contact with us.</p>
+            <div class="icon">
+                <p class="geo-marker"> Los Angeles, California, US</p>
+                <p class="phone"> Phone: +00 151515</p>
+                <p class="envelope"> Email: mail@mail.com</p>
+                <br>
+                <form class="text-input" name="contactForm">
+                    <p><input type="text" placeholder="Name" name="name"></p>
+                    <p><input type="text" placeholder="Email" name="email"></p>
+                    <p><input type="text" placeholder="Subject" name="subject"></p>
+                    <p><input type="text" placeholder="Message" name="message"></p>
+                    <button id="submitButton" class="button" type="submit"><i class="button-icon button-icon-paper-plane"></i> SEND MESSAGE</button>
+                </form>
+                <!-- Image of location -->
+                <img src="/assets/images/map.jpg" class="map-image">
+            </div>
+        </div>
+        <script src="/assets/js/validationHandlers.js"></script>
+    </body>
+    <script src="/assets/js/main.js"></script>
+</html>
