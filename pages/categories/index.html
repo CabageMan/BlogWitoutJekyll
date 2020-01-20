@@ -21,7 +21,33 @@
             <a href="/pages/contacts/" class="right usual">CONTACT</a>
         </div>
         <h1>Categories</h1>
-        <p>Here you can see categories</p>
+        <p>If you tap on "Show Login", you can see login form.</p>
+        <button class="button" onclick="document.getElementById('modalLogin').style.display='block'">Show Login</button>
+
+        <!-- The modal view -->
+        <div id="modalLogin" class="modal">
+            <span onclick="document.getElementById('modalLogin').style.display = 'none'" class="close-button" title="Close Modal">&times;</span>
+            <form class="modal-content zoom-animation" name="loginForm">
+                <div>
+                    <img src="/assets/images/icons/personMale.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username">
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password">
+                    <button id="loginSubmitButton" type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="rememberMe"> Remember Me
+                    </label>
+                </div>
+            </form>
+        </div>
+        <!-- <script type="module" src="/assets/js/categories.js"></script> -->
     </body>
     <script src="/assets/js/main.js"></script>
 </html>
+
+
+<!-- TO DO: -->
+<!-- Create new JS file. Use Babel. -->

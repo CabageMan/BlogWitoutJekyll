@@ -1,3 +1,5 @@
+@import url("loginView.css");
+
 .navigation-bar { overflow: hidden; background-color: #ddd; }
 
 .navigation-bar a.left { float: left; }
