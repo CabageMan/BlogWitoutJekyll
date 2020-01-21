@@ -26,20 +26,22 @@
 
         <!-- The modal view -->
         <div id="modalLogin" class="modal">
-            <span onclick="document.getElementById('modalLogin').style.display = 'none'" class="close-button" title="Close Modal">&times;</span>
             <form class="modal-content zoom-animation" name="loginForm">
-                <div>
-                    <img src="/assets/images/icons/personMale.png" alt="Avatar" class="avatar">
+                <div class="image-container">
+                    <span onclick="document.getElementById('modalLogin').style.display = 'none'" class="modal-button-close" title="Close Modal">&times;</span>
+                    <img src="/assets/images/icons/userProfile.png" alt="Avatar" class="avatar">
                 </div>
                 <div class="container">
                     <label for="username"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="username">
                     <label for="password"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="password">
-                    <button id="loginSubmitButton" type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="rememberMe"> Remember Me
-                    </label>
+                    <button id="loginSubmitButton" type="submit" class="modal-button">Login</button>
+                    <label for="rememberMe"><input type="checkbox" checked="checked" name="rememberMe"><b>Remember Me</b></label>
+                </div>
+                <div class="container" style="background-color: #f1f1f1;">
+                    <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="modal-button-cancel">Cancel</button>
+                    <span class="password">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
         </div>

@@ -1,5 +1,14 @@
-input[type=text],
-input[type=password] {
+.image-container {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.container {
+  padding: 16px;
+  text-align: center;
+}
+.container input[type=text],
+.container input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -7,42 +16,14 @@ input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+.container input[type=checkbox] {
+  width: 15px;
+  padding: 12px 20px;
+  display: inline-block;
 }
-button.cancelButton {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-button:hover {
-  opacity: 0.8;
-}
-.close-button {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-.close-button:hover,
-.close-button:focus {
-  color: red;
-  cursor: pointer;
-}
-.img-container {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-.container {
-  padding: 16px;
+.container label {
+  float: left;
+  display: block;
 }
 .modal {
   display: none;
@@ -58,12 +39,44 @@ button:hover {
 }
 .modal-content {
   background-color: #fefefe;
-  margin: 5px auto;
+  margin: 5px auto 15px auto;
   border: 1px solid #888;
   width: 80%;
 }
+.modal-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  display: block;
+}
+.modal-button:hover {
+  opacity: 0.8;
+}
+.modal-button-cancel {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.modal-button-close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.modal-button-close:hover,
+.modal-button-close:focus {
+  color: red;
+  cursor: pointer;
+}
 img.avatar {
-  width: 40%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 span.password {

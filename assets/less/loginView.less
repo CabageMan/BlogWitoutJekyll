@@ -7,60 +7,36 @@
 @modalContentBorderColor: #888;
 @closeButtonColor: #000;
 
-
-// Inputs
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid @inputBorderColor;
-    box-sizing: border-box;
-}
-
-// Buttons
-button {
-    background-color: @buttonBackground;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-
-    &.cancelButton {
-        width: auto;
-        padding: 10px 18px;
-        background-color: @cancelButtonBackground;
-    }
-
-    &:hover {
-        opacity: 0.8;
-    }
-}
-
-.close-button {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: @closeButtonColor;
-    font-size: 35px;
-    font-weight: bold;
-
-    &:hover, &:focus {
-        color: red;
-        cursor: pointer;
-    }
-}
-
 // Containers
-.img-container {
+.image-container {
     text-align: center;
     margin: 24px 0 12px 0;
+    position: relative;
 }
 
 .container {
     padding:  16px;
+    text-align: center;
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid @inputBorderColor;
+        box-sizing: border-box;
+    }
+
+    input[type=checkbox] {
+        width: 15px;
+        padding: 12px 20px;
+        display: inline-block;
+    }
+
+    label {
+        float: left;
+        display: block;
+    }
 }
 
 .modal {
@@ -77,15 +53,51 @@ button {
 
     &-content {
         background-color: @modalContentBackground;
-        margin: 5px auto;
+        margin: 5px auto 15px auto;
         border: 1px solid @modalContentBorderColor;
         width: 80%;
+    }
+
+    &-button {
+        background-color: @buttonBackground;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        display: block;
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    
+        &-cancel {
+            width: auto;
+            padding: 10px 18px;
+            background-color: @cancelButtonBackground;
+        }
+    
+        &-close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: @closeButtonColor;
+            font-size: 35px;
+            font-weight: bold;
+    
+            &:hover, &:focus {
+                color: red;
+                cursor: pointer;
+            }
+        }
     }
 }
 
 // Images
 img.avatar {
-    width: 40%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
