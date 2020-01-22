@@ -20,10 +20,12 @@
             <a href="/pages/about/" class="right usual">ABOUT</a>
             <a href="/pages/contacts/" class="right usual">CONTACT</a>
         </div>
-        <h1>Categories</h1>
-        <p>If you tap on "Show Login", you can see login form.</p>
-        <button class="button" onclick="document.getElementById('modalLogin').style.display='block'">Show Login</button>
-
+        <div style="text-align: center; position: relative;">
+            <h1>Categories</h1>
+            <p>If you tap on "Show Login", you can see login form.</p>
+            <button class="show-login" onclick="document.getElementById('modalLogin').style.display='block'">Show Login</button>
+        </div>
+        
         <!-- The modal view -->
         <div id="modalLogin" class="modal">
             <form class="modal-content zoom-animation" name="loginForm">
@@ -39,8 +41,7 @@
                     <button id="loginSubmitButton" type="submit" class="modal-button">Login</button>
                     <label for="rememberMe"><input type="checkbox" checked="checked" name="rememberMe"><b>Remember Me</b></label>
                 </div>
-                <div class="container" style="background-color: #f1f1f1;">
-                    <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="modal-button-cancel">Cancel</button>
+                <div style="margin: 16px 8px; text-align: right;">
                     <span class="password">Forgot <a href="#">password?</a></span>
                 </div>
             </form>

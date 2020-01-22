@@ -19,6 +19,7 @@
 .container input[type=checkbox] {
   width: 15px;
   padding: 12px 20px;
+  margin: 5px 0;
   display: inline-block;
 }
 .container label {
@@ -47,19 +48,15 @@
   background-color: #4caf50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 8px auto;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 130px;
   display: block;
+  text-align: center;
 }
 .modal-button:hover {
   opacity: 0.8;
-}
-.modal-button-cancel {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
 }
 .modal-button-close {
   position: absolute;
@@ -79,8 +76,34 @@ img.avatar {
   height: 100px;
   border-radius: 50%;
 }
+.show-login {
+  text-align: center;
+  display: block;
+  background-color: #4caf50;
+  padding: 15px 25px;
+  position: relative;
+  margin: 0 auto;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999999;
+}
+.show-login:hover {
+  background-color: #3e8e41;
+}
+.show-login:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666666;
+  transform: translateY(4px);
+}
 span.password {
-  float: right;
+  display: block;
+  position: relative;
+  right: 0;
   padding-top: 16px;
 }
 .zoom-animation {

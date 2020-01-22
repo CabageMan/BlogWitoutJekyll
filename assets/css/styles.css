@@ -104,7 +104,7 @@
 
 .row:after { content: ""; display: table; clear: both; padding: 0 8px; margin-top: 64px; }
 
-.button { font-size: 18px !important; display: inline-block; vertical-align: middle; overflow: hidden; text-decoration: none; text-align: center; cursor: pointer; white-space: nowrap; color: #000; background-color: #fff; opacity: 0.60; margin-top: 16px; padding: 12px 24px; }
+.button { font-size: 18px; display: inline-block; vertical-align: middle; overflow: hidden; text-decoration: none; text-align: center; cursor: pointer; white-space: nowrap; color: #000; background-color: #fff; opacity: 0.60; margin-top: 16px; padding: 12px 24px; }
 
 .button:hover { opacity: 1.0; }
 
@@ -116,11 +116,11 @@
 
 .text-center { text-align: center; }
 
-.extra-large-title { font-size: 64px !important; }
+.extra-large-title { font-size: 64px; }
 
-.large-title { font-size: 36px !important; }
+.large-title { font-size: 36px; }
 
-.middle-title { font-size: 18px !important; }
+.middle-title { font-size: 18px; }
 
 @media screen and (max-width: 900px) { .about-card { width: 50%; } }
 
