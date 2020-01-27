@@ -1,0 +1,67 @@
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+
+// Styles
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.home {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+    
+    &-main {
+        grid-area: main;
+        justify-self: center;
+        color: white;
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    &-footer {
+        grid-area: footer;
+    }
+    
+    &-container {
+        display: grid;
+        height: 100%;
+        background: {
+            image: url("/assets/images/mac.jpg"); 
+            position: center; 
+            repeat: no-repeat; 
+            size: cover; 
+        }
+        grid-template: {
+            columns: 1fr 1fr 1fr 1fr;
+            rows: 50px auto 50px;
+            areas: 
+                "header header header header"
+                " . main main . "
+                "footer . . ."; 
+        }
+    }
+}
+
+.social-links {
+    padding: 15px 0 15px 0;
+    
+    a {
+        padding: 16px 16px 0 16px; 
+        background: {
+            size: 38px; 
+            repeat: no-repeat; 
+            position: center; 
+        }
+        &:hover { opacity: 0.5; }
+        &.facebook { background-image: url("/assets/images/icons/facebookColor.png"); }
+        &.instagram { background-image: url("/assets/images/icons/instagramColor.png"); }
+        &.snapchat { background-image: url("/assets/images/icons/snapchatColor.png"); }
+        &.pinterest { background-image: url("/assets/images/icons/pinterestColor.png"); }
+        &.twitter { background-image: url("/assets/images/icons/twitterColor.png"); }
+        &.linkedin { background-image: url("/assets/images/icons/linkedinColor.png"); }
+    }
+}

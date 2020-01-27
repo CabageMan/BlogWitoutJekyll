@@ -1,21 +1,8 @@
 // Variables
-
-// Navigation Bar Colors
-$currentLinkColor: cyan;
-$usualLinkColor: green;
-$usualLinkHoverColor: #555;
 $navigationBarColor: #ddd;
 $mainBackground: #f1f1f1;
 
 // Mixins
-
-// Navigation Bar
-@mixin item-layout {
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
 
 // Styles
 body, html {
@@ -23,7 +10,7 @@ body, html {
     margin: 0;
 }
 
-.screen {
+.grid {
     &-header {
         grid-area: header;
         background-color: $navigationBarColor;
@@ -43,40 +30,5 @@ body, html {
             "header header header header"
             "main main main main"
             "main main main main"; 
-    }
-}
-
-.navbar {
-    &-current {
-        @include item-layout;
-        color: $currentLinkColor;
-        background-color: $usualLinkColor;
-    }
-
-    &-usual {
-        @include item-layout;
-        color: black;
-        &:hover {
-            background-color: $usualLinkHoverColor;
-            color: white;
-        }
-    }
-
-    &-itemleft {
-        grid-area: itemleft;
-        justify-self: start;
-        align-self: center;
-    }
-    &-itemright {
-        grid-area: itemright;
-        justify-self: end;
-        align-self: center;
-    }
-    &-container {
-        display: grid;
-        height: 100%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "itemleft itemright";
     }
 }

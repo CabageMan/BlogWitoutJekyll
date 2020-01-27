@@ -12,24 +12,6 @@
 
 .navigation-bar a.usual:hover { background-color: #555; color: white; }
 
-.social-links { padding: 15px 0 15px 0; }
-
-.social-links a { padding: 16px 16px 0 16px; background-size: 38px; background-repeat: no-repeat; background-position: center; }
-
-.social-links a:hover { opacity: 0.5; }
-
-.social-links a.facebook { background-image: url("/assets/images/icons/facebookColor.png"); }
-
-.social-links a.instagram { background-image: url("/assets/images/icons/instagramColor.png"); }
-
-.social-links a.snapchat { background-image: url("/assets/images/icons/snapchatColor.png"); }
-
-.social-links a.pinterest { background-image: url("/assets/images/icons/pinterestColor.png"); }
-
-.social-links a.twitter { background-image: url("/assets/images/icons/twitterColor.png"); }
-
-.social-links a.linkedin { background-image: url("/assets/images/icons/linkedinColor.png"); }
-
 .contact-icon { margin-top: 50px; }
 
 .contact-icon p:before { content: ""; background-size: 20px; background-repeat: no-repeat; background-position: center; width: 20px; height: 20px; float: left; margin: 0 8px 0 0; }
@@ -98,27 +80,50 @@
 
 .author-avatar { float: right; margin: 10px 0 10px 40px; border-radius: 50%; }
 
-.display-left { position: absolute; top: 50%; left: 0; transform: translate(0%, -50%); }
+.display-left { 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translate(0%, -50%); 
+}
 
 .display-bottom-left { position: absolute; left: 0; bottom: 50px; }
 
 .row:after { content: ""; display: table; clear: both; padding: 0 8px; margin-top: 64px; }
 
-.button { font-size: 18px; display: inline-block; vertical-align: middle; overflow: hidden; text-decoration: none; text-align: center; cursor: pointer; white-space: nowrap; color: #000; background-color: #fff; opacity: 0.60; margin-top: 16px; padding: 12px 24px; }
+.button { 
+    font-size: 18px; 
+    display: inline-block; 
+    vertical-align: middle; 
+    overflow: hidden; 
+    text-decoration: none; 
+    text-align: center; 
+    cursor: pointer; 
+    white-space: nowrap; 
+    color: #000; 
+    background-color: #fff; 
+    opacity: 0.60; 
+    margin-top: 16px; 
+    padding: 12px 24px; 
+}
 
 .button:hover { opacity: 1.0; }
 
-.home-image-background { position: relative; filter: grayscale(50%); background-image: url("/assets/images/mac.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%; }
-
 .map-image { max-width: 100%; height: auto; filter: grayscale(75%); width: 100%; margin-top: 50px; }
 
-.text-white { color: #fff; }
+.text-white { 
+    color: #fff; 
+}
 
 .text-center { text-align: center; }
 
-.extra-large-title { font-size: 64px; }
+.extra-large-title { 
+    font-size: 64px;
+}
 
-.large-title { font-size: 36px; }
+.large-title { 
+    font-size: 36px;
+}
 
 .middle-title { font-size: 18px; }
 

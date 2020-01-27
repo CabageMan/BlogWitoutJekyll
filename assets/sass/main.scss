@@ -1,0 +1,84 @@
+@import "home.scss";
+@import "grid.scss";
+
+// Variables
+// Navigation Bar Colors
+$currentLinkColor: cyan;
+$usualLinkColor: green;
+$usualLinkHoverColor: #555;
+
+// Mixins
+// Navigation Bar
+@mixin item-layout {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+// Styles
+// Navigation bar
+.navbar {
+    &-current {
+        @include item-layout;
+        color: $currentLinkColor;
+        background-color: $usualLinkColor;
+    }
+
+    &-usual {
+        @include item-layout;
+        color: black;
+        &:hover {
+            background-color: $usualLinkHoverColor;
+            color: white;
+        }
+    }
+
+    &-itemleft {
+        grid-area: itemleft;
+        justify-self: start;
+        align-self: center;
+    }
+    &-itemright {
+        grid-area: itemright;
+        justify-self: end;
+        align-self: center;
+    }
+    &-container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "itemleft itemright";
+    }
+}
+
+// Text
+.large-title { 
+    font-size: 36px;
+}
+
+.extra-large-title { 
+    font-size: 64px;
+}
+
+.text-white { 
+    color: #fff; 
+}
+
+// UI Elements
+.button { 
+    font-size: 18px; 
+    display: inline-block; 
+    vertical-align: middle; 
+    overflow: hidden; 
+    text-decoration: none; 
+    text-align: center; 
+    cursor: pointer; 
+    white-space: nowrap; 
+    color: #000; 
+    background-color: #fff; 
+    opacity: 0.60; 
+    margin-top: 16px; 
+    padding: 12px 24px; 
+}
