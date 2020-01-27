@@ -171,6 +171,22 @@
   grid-template-areas: "header header header header" "main main main main" "main main main main";
 }
 
+.about-header {
+  grid-area: header;
+  background-color: #ddd;
+}
+.about-main {
+  grid-area: main;
+  background-color: #f1f1f1;
+}
+.about-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas: "header header header header" "main main main main" "main main main main";
+}
+
 body, html {
   height: 100%;
   margin: 0;

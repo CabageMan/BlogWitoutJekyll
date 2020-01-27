@@ -1,0 +1,31 @@
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+
+// Mixins
+
+// Styles
+.about {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+    
+    &-main {
+        grid-area: main;
+        background-color: $mainBackground;
+    }
+    
+    &-container {
+        display: grid;
+        height: 100%;
+        grid-template: {
+            columns: 1fr 1fr 1fr 1fr;
+            rows: 50px auto auto;
+            areas: 
+                "header header header header"
+                "main main main main"
+                "main main main main";
+        } 
+    }
+}
