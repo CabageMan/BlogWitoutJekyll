@@ -5,11 +5,6 @@ $mainBackground: #f1f1f1;
 // Mixins
 
 // Styles
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
 .grid {
     &-header {
         grid-area: header;
@@ -24,11 +19,13 @@ body, html {
     &-container {
         display: grid;
         height: 100%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 50px auto auto;
-        grid-template-areas: 
-            "header header header header"
-            "main main main main"
-            "main main main main"; 
+        grid-template: {
+            columns: 1fr 1fr 1fr 1fr;
+            rows: 50px auto auto;
+            areas: 
+                "header header header header"
+                "main main main main"
+                "main main main main";
+        } 
     }
 }

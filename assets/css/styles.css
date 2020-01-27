@@ -36,7 +36,14 @@
 
 .about-icon-fourth:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
 
-.text-input input { margin: 0; padding: 8px; display: block; width: 100%; border: 1px solid #ccc; box-sizing: border-box; }
+.text-input input { 
+    margin: 0;
+    padding: 8px; 
+    display: block; 
+    width: 100%; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
 
 .sidebar { width: 160px; height: 100%; position: fixed; z-index: 1; top: 48px; left: 0; overflow-x: hidden; background-color: yellowgreen; padding-top: 20px; }
 
@@ -62,7 +69,11 @@
 
 * { box-sizing: border-box; }
 
-.page-container { color: #000; background-color: #f1f1f1; padding: 128px 16px; }
+.page-container {
+    color: #000;
+    background-color: #f1f1f1;
+    padding: 128px 16px; 
+}
 
 .about-card { float: left; width: 25%; padding: 25px; }
 
@@ -109,7 +120,13 @@
 
 .button:hover { opacity: 1.0; }
 
-.map-image { max-width: 100%; height: auto; filter: grayscale(75%); width: 100%; margin-top: 50px; }
+.map-image { 
+    max-width: 100%; 
+    height: auto; 
+    filter: grayscale(75%); 
+    width: 100%; 
+    margin-top: 50px; 
+}
 
 .text-white { 
     color: #fff; 

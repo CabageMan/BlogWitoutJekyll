@@ -1,4 +1,5 @@
 @import "home.scss";
+@import "contact.scss";
 @import "grid.scss";
 
 // Variables
@@ -17,6 +18,12 @@ $usualLinkHoverColor: #555;
 }
 
 // Styles
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 // Navigation bar
 .navbar {
     &-current {
@@ -54,6 +61,10 @@ $usualLinkHoverColor: #555;
 }
 
 // Text
+.middle-title { 
+    font-size: 18px; 
+}
+
 .large-title { 
     font-size: 36px;
 }

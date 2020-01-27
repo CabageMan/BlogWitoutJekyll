@@ -1,0 +1,64 @@
+@import "icons.scss";
+
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+
+// Mixins
+
+// Styles
+.contact {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+
+    &-title {
+        grid-area: title;
+        text-align: center;
+        color: black;
+    }
+
+    &-info {
+        grid-area: info;
+        padding-left: 50px;
+    }
+
+    &-form {
+        grid-area: form;
+        padding: 8px;
+        input {
+            padding: 8px;
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    }
+
+    &-map {
+        grid-area: map;
+        filter: grayscale(75%); 
+        margin-top: 50px;
+        padding: 8px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    &-container {
+        display: grid;
+        background-color: $mainBackground;
+        grid-template: {
+            columns: 1fr 1fr 1fr 1fr;
+            rows: 50px auto auto auto 1fr;
+            areas: 
+                "header header header header"
+                ". title title ."
+                "info info . ."
+                "form form form form"
+                "map map map map"; 
+        }
+    }
+}

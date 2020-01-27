@@ -1,0 +1,41 @@
+// Variables
+$contactIconWidth: 20px;
+$contactIconHeight: 20px;
+$buttonIconWidth: 20px;
+$buttonIconHeight: 20px;
+$aboutIconWidth: 64px;
+$aboutIconHeight: 64px;
+$floatLeft: left;
+$floatTop: top;
+
+@mixin icon-before($float, $width, $height) {
+  content: "";
+  background: {
+    size: $width;
+    repeat: no-repeat;
+    position: center;
+  }
+  width: $width;
+  height: $height;
+  float: $float;
+  margin: 0 8px 0 0;
+}
+
+.contact-icon {
+  p:before { @include icon-before($floatLeft, $contactIconWidth, $contactIconHeight); }
+  p.geo-marker:before { background-image: url("/assets/images/icons/geoMarker.png"); }
+  p.phone:before { background-image: url("/assets/images/icons/phone.png"); }
+  p.envelope:before { background-image: url("/assets/images/icons/envelope.png"); }
+}
+
+.button-icon:before { @include icon-before($floatLeft, $buttonIconWidth, $contactIconHeight); }
+
+.paper-plane:before { background-image: url("/assets/images/icons/paperPlane.png"); }
+
+.about-icon {
+  @include icon-before($floatTop, $aboutIconWidth, $aboutIconHeight);
+  &-first:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  &-second:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  &-third:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  &-fourth:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+}
