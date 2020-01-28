@@ -11,21 +11,74 @@ $mainBackground: #f1f1f1;
         background-color: $navigationBarColor;
     }
     
-    &-main {
-        grid-area: main;
-        background-color: $mainBackground;
+    &-title {
+        grid-area: title;
+        text-align: center;
+        color: black;
+    }
+
+    &-card-a {
+        grid-area: card-a;
+    }
+
+    &-card-b {
+        grid-area: card-b;
+    }
+
+    &-card-c {
+        grid-area: card-c;
+    }
+
+    &-card-d {
+        grid-area: card-d;
     }
     
     &-container {
         display: grid;
         height: 100%;
+        background-color: $mainBackground;
         grid-template: {
             columns: 1fr 1fr 1fr 1fr;
             rows: 50px auto auto;
             areas: 
                 "header header header header"
-                "main main main main"
-                "main main main main";
+                ". title title ."
+                "card-a card-b card-c card-d";
         } 
+    }
+}
+
+[class*="about-card"] {
+    padding: 25px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .about-container {
+        grid-template: {
+            columns: 1fr 1fr;
+            rows: 50px auto auto auto;
+            areas: 
+                "header header"
+                "title title"
+                "card-a card-b"
+                "card-c card-d";
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-container {
+        grid-template: {
+            columns: 1fr;
+            rows: 50px auto auto auto auto auto;
+            areas: 
+                "header"
+                "title"
+                "card-a" 
+                "card-b" 
+                "card-c" 
+                "card-d";
+        }
     }
 }

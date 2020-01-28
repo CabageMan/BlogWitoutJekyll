@@ -34,8 +34,8 @@ $floatTop: top;
 
 .about-icon {
   @include icon-before($floatTop, $aboutIconWidth, $aboutIconHeight);
-  &-first:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
-  &-second:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
-  &-third:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
-  &-fourth:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  &:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  // &-second:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  // &-third:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
+  // &-fourth:before { content: url("/assets/images/icons/artificialIntelligence.png"); }
 }

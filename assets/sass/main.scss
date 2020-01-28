@@ -1,3 +1,4 @@
+@import "icons.scss";
 @import "home.scss";
 @import "contact.scss";
 @import "grid.scss";
@@ -62,21 +63,13 @@ body, html {
 }
 
 // Text
-.middle-title { 
-    font-size: 18px; 
-}
+.middle-title { font-size: 18px; }
 
-.large-title { 
-    font-size: 36px;
-}
+.large-title { font-size: 36px; }
 
-.extra-large-title { 
-    font-size: 64px;
-}
+.extra-large-title { font-size: 64px; }
 
-.text-white { 
-    color: #fff; 
-}
+.text-white { color: #fff; }
 
 // UI Elements
 .button { 
@@ -93,4 +86,10 @@ body, html {
     opacity: 0.60; 
     margin-top: 16px; 
     padding: 12px 24px; 
+}
+
+@media screen and (max-width: 1300px) {
+    .navbar-container {
+        grid-template-columns: 20% 80%;
+    }
 }

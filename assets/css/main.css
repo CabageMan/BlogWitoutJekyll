@@ -1,3 +1,52 @@
+.contact-icon p:before {
+  content: "";
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 8px 0 0;
+}
+.contact-icon p.geo-marker:before {
+  background-image: url("/assets/images/icons/geoMarker.png");
+}
+.contact-icon p.phone:before {
+  background-image: url("/assets/images/icons/phone.png");
+}
+.contact-icon p.envelope:before {
+  background-image: url("/assets/images/icons/envelope.png");
+}
+
+.button-icon:before {
+  content: "";
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 8px 0 0;
+}
+
+.paper-plane:before {
+  background-image: url("/assets/images/icons/paperPlane.png");
+}
+
+.about-icon {
+  content: "";
+  background-size: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 64px;
+  height: 64px;
+  float: top;
+  margin: 0 8px 0 0;
+}
+.about-icon:before {
+  content: url("/assets/images/icons/artificialIntelligence.png");
+}
+
 .home-header {
   grid-area: header;
   background-color: #ddd;
@@ -53,64 +102,6 @@
 }
 .social-links a.linkedin {
   background-image: url("/assets/images/icons/linkedinColor.png");
-}
-
-.contact-icon p:before {
-  content: "";
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  float: left;
-  margin: 0 8px 0 0;
-}
-.contact-icon p.geo-marker:before {
-  background-image: url("/assets/images/icons/geoMarker.png");
-}
-.contact-icon p.phone:before {
-  background-image: url("/assets/images/icons/phone.png");
-}
-.contact-icon p.envelope:before {
-  background-image: url("/assets/images/icons/envelope.png");
-}
-
-.button-icon:before {
-  content: "";
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  float: left;
-  margin: 0 8px 0 0;
-}
-
-.paper-plane:before {
-  background-image: url("/assets/images/icons/paperPlane.png");
-}
-
-.about-icon {
-  content: "";
-  background-size: 64px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 64px;
-  height: 64px;
-  float: top;
-  margin: 0 8px 0 0;
-}
-.about-icon-first:before {
-  content: url("/assets/images/icons/artificialIntelligence.png");
-}
-.about-icon-second:before {
-  content: url("/assets/images/icons/artificialIntelligence.png");
-}
-.about-icon-third:before {
-  content: url("/assets/images/icons/artificialIntelligence.png");
-}
-.about-icon-fourth:before {
-  content: url("/assets/images/icons/artificialIntelligence.png");
 }
 
 .contact-header {
@@ -175,18 +166,51 @@
   grid-area: header;
   background-color: #ddd;
 }
-.about-main {
-  grid-area: main;
-  background-color: #f1f1f1;
+.about-title {
+  grid-area: title;
+  text-align: center;
+  color: black;
+}
+.about-card-a {
+  grid-area: card-a;
+}
+.about-card-b {
+  grid-area: card-b;
+}
+.about-card-c {
+  grid-area: card-c;
+}
+.about-card-d {
+  grid-area: card-d;
 }
 .about-container {
   display: grid;
   height: 100%;
+  background-color: #f1f1f1;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px auto auto;
-  grid-template-areas: "header header header header" "main main main main" "main main main main";
+  grid-template-areas: "header header header header" ". title title ." "card-a card-b card-c card-d";
 }
 
+[class*=about-card] {
+  padding: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto auto auto;
+    grid-template-areas: "header header" "title title" "card-a card-b" "card-c card-d";
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto auto auto auto auto;
+    grid-template-areas: "header" "title" "card-a" "card-b" "card-c" "card-d";
+  }
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -259,6 +283,12 @@ body, html {
   opacity: 0.6;
   margin-top: 16px;
   padding: 12px 24px;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar-container {
+    grid-template-columns: 20% 80%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
