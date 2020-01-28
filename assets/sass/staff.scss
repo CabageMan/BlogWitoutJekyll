@@ -1,0 +1,54 @@
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+$cardBorderColor: #bfbfbf;
+$cardShadowColor: #aaaaaa;
+
+// Mixins
+
+// Styles
+.staff {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+
+    &-title {
+        grid-area: title;
+        text-align: center;
+        color: black;
+    }
+    
+    &-card-a { grid-area: card-a; }
+    &-card-b { grid-area: card-b; }
+    &-card-c { grid-area: card-c; }
+    &-card-d { grid-area: card-d; }
+    &-card-e { grid-area: card-e; }
+    &-card-f { grid-area: card-f; }
+    
+    &-container {
+        display: grid;
+        height: 100%;
+        background-color: $mainBackground;
+        grid-gap: 15px;
+        grid-template: {
+            columns: 15px 1fr 1fr 1fr 15px;
+            rows: 50px auto auto auto 15px;
+            areas: 
+                "header header header header header"
+                ". . title . ."
+                ". card-a card-b card-c ."
+                ". card-d card-e card-f ."
+                ". . . . .";
+        } 
+    }
+}
+
+[class*="staff-card"] {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid $cardBorderColor;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 10px 10px 5px $cardShadowColor;
+}

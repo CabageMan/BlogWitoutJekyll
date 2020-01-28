@@ -211,7 +211,54 @@
     grid-template-areas: "header" "title" "card-a" "card-b" "card-c" "card-d";
   }
 }
+.staff-header {
+  grid-area: header;
+  background-color: #ddd;
+}
+.staff-title {
+  grid-area: title;
+  text-align: center;
+  color: black;
+}
+.staff-card-a {
+  grid-area: card-a;
+}
+.staff-card-b {
+  grid-area: card-b;
+}
+.staff-card-c {
+  grid-area: card-c;
+}
+.staff-card-d {
+  grid-area: card-d;
+}
+.staff-card-e {
+  grid-area: card-e;
+}
+.staff-card-f {
+  grid-area: card-f;
+}
+.staff-container {
+  display: grid;
+  height: 100%;
+  background-color: #f1f1f1;
+  grid-gap: 15px;
+  grid-template-columns: 15px 1fr 1fr 1fr 15px;
+  grid-template-rows: 50px auto auto auto 15px;
+  grid-template-areas: "header header header header header" ". . title . ." ". card-a card-b card-c ." ". card-d card-e card-f ." ". . . . .";
+}
+
+[class*=staff-card] {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
 body, html {
+  min-width: 780px;
   height: 100%;
   margin: 0;
 }

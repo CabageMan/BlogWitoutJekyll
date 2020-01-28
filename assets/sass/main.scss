@@ -3,6 +3,7 @@
 @import "contact.scss";
 @import "grid.scss";
 @import "about.scss";
+@import "staff.scss";
 
 // Variables
 // Navigation Bar Colors
@@ -22,6 +23,7 @@ $usualLinkHoverColor: #555;
 // Styles
 
 body, html {
+    min-width: 780px;
     height: 100%;
     margin: 0;
 }

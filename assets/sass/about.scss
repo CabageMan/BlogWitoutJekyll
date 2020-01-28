@@ -17,21 +17,10 @@ $mainBackground: #f1f1f1;
         color: black;
     }
 
-    &-card-a {
-        grid-area: card-a;
-    }
-
-    &-card-b {
-        grid-area: card-b;
-    }
-
-    &-card-c {
-        grid-area: card-c;
-    }
-
-    &-card-d {
-        grid-area: card-d;
-    }
+    &-card-a { grid-area: card-a; }
+    &-card-b { grid-area: card-b; }
+    &-card-c { grid-area: card-c; }
+    &-card-d { grid-area: card-d; }
     
     &-container {
         display: grid;
