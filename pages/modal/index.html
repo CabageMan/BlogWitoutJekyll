@@ -3,28 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <title>Modal</title>
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <style>
-            body, html {
-                height: 100%;
-                margin: 0;
-            }
-        </style>
+        <link rel="stylesheet" href="/assets/css/loginView.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
     </head>
     <body>
-        <div class="navigation-bar">
-            <a href="/" class="left usual">HOME</a>
-            <a href="/pages/grid/" class="right usual">GRID VIEWS</a>
-            <a href="/pages/modal/" class="right current">MODAL</a>
-            <a href="/pages/blog/" class="right usual">BLOG</a>
-            <a href="/pages/staff/" class="right usual">STAFF</a>
-            <a href="/pages/about/" class="right usual">ABOUT</a>
-            <a href="/pages/contacts/" class="right usual">CONTACT</a>
-        </div>
-        <div style="text-align: center; position: relative;">
-            <h1>Modal Views</h1>
-            <p>If you tap on "Show Login", you can see login form.</p>
-            <button class="show-login" onclick="document.getElementById('modalLogin').style.display='block'">Show Login</button>
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="navbar-container">
+                    <div class="navbar-itemleft">
+                        <a href="/" class="navbar-usual">HOME</a>
+                    </div>
+                    <div class="navbar-itemright">
+                        <a href="/pages/contacts/" class="navbar-usual">CONTACT</a>
+                        <a href="/pages/about/" class="navbar-usual">ABOUT</a>
+                        <a href="/pages/staff/" class="navbar-usual">STAFF</a>
+                        <a href="/pages/blog/" class="navbar-usual">BLOG</a>
+                        <a href="/pages/modal/" class="navbar-current">MODAL</a>
+                        <a href="/pages/grid/" class="navbar-usual">GRID VIEWS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-title">
+                <h1>Modal Views</h1>
+                <p>If you tap on "Show Login", you can see login form.</p>
+            </div>
+            <div class="modal-main">
+                <button class="show-login" onclick="document.getElementById('modalLogin').style.display='block'">Show Login</button>
+            </div>
         </div>
         
         <!-- The modal view -->

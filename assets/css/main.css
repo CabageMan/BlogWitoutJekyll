@@ -257,6 +257,28 @@
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 
+.modal-header {
+  grid-area: header;
+  background-color: #ddd;
+}
+.modal-title {
+  grid-area: title;
+  text-align: center;
+  color: black;
+}
+.modal-main {
+  grid-area: main;
+  text-align: center;
+}
+.modal-container {
+  display: grid;
+  height: 100%;
+  background-color: #f1f1f1;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas: "header header header header" ". title title ." "main main main main";
+}
+
 body, html {
   min-width: 780px;
   height: 100%;

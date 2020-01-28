@@ -1,0 +1,38 @@
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+
+// Mixins
+
+// Styles
+.modal {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+
+    &-title {
+        grid-area: title;
+        text-align: center;
+        color: black;
+    }
+    
+    &-main {
+        grid-area: main;
+        text-align: center;
+    }
+    
+    &-container {
+        display: grid;
+        height: 100%;
+        background-color: $mainBackground;
+        grid-template: {
+            columns: 1fr 1fr 1fr 1fr;
+            rows: 50px auto auto;
+            areas: 
+                "header header header header"
+                ". title title ."
+                "main main main main";
+        } 
+    }
+}
