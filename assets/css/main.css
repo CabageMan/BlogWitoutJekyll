@@ -257,6 +257,56 @@
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 
+.blog-header {
+  grid-area: header;
+  background-color: #ddd;
+}
+.blog-sidebar {
+  grid-area: sidebar;
+  background-color: yellowgreen;
+  width: 160px;
+  height: 100%;
+  padding-top: 20px;
+}
+.blog-sidebar h2 {
+  margin-left: 13px;
+}
+.blog-sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+}
+.blog-sidebar a:hover {
+  color: #f1f1f1;
+}
+.blog-title {
+  grid-area: title;
+  text-align: center;
+}
+.blog-avatar {
+  grid-area: avatar;
+}
+.blog-content {
+  grid-area: content;
+  text-align: left;
+  padding: 25px 50px;
+}
+.blog-intro-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  grid-template-rows: 50px 130px auto;
+  grid-template-areas: "header header header header" "sidebar . title ." "sidebar content content content";
+}
+.blog-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  grid-template-rows: 50px auto auto auto;
+  grid-template-areas: "header header header header" "sidebar . title ." "sidebar avatar . ." "sidebar content content content";
+}
+
 .modal-header {
   grid-area: header;
   background-color: #ddd;

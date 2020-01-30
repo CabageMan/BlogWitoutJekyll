@@ -1,0 +1,75 @@
+// Variables
+$navigationBarColor: #ddd;
+$mainBackground: #f1f1f1;
+$sideBarLinkColor: #818181;
+$sideBArLinkHoveredColor: #f1f1f1;
+
+// Mixins
+
+// Styles
+.blog {
+    &-header {
+        grid-area: header;
+        background-color: $navigationBarColor;
+    }
+
+    &-sidebar {
+        grid-area: sidebar;
+        background-color: yellowgreen;
+        width: 160px;
+        height: 100%;
+        padding-top: 20px;
+
+        h2 { margin-left: 13px; }
+
+        a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: $sideBarLinkColor;
+            &:hover { color: $sideBArLinkHoveredColor; }
+        }
+    }
+
+    &-title {
+        grid-area: title;
+        text-align: center;
+    }
+
+    &-avatar {
+        grid-area: avatar;
+    }
+    
+    &-content {
+        grid-area: content;
+        text-align: left;
+        padding: 25px 50px;
+    }
+    
+    &-intro-container {
+        display: grid;
+        height: 100%;
+        grid-template: {
+            columns: 160px 1fr 1fr 1fr;
+            rows: 50px 130px auto;
+            areas: 
+                "header header header header"
+                "sidebar . title ."
+                "sidebar content content content";
+        } 
+    }
+
+    &-container {
+        display: grid;
+        height: 100%;
+        grid-template: {
+            columns: 160px 1fr 1fr 1fr;
+            rows: 50px auto auto auto;
+            areas: 
+                "header header header header"
+                "sidebar . title ."
+                "sidebar avatar . ."
+                "sidebar content content content";
+        } 
+    }
+}
